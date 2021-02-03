@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Chess training</title>
+	<meta name="description" content="Website to improve your chess skill">
+	<meta name="kaywords" content="chess, training, move, improve, skill, learning">
+	<meta name="author" content="Rafał Wójcik">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+	
+		<script src="training.js"></script>
+	
+</head>
+
+<body>
+	<main>
+
+		<header>
+			<h1 class="logo"> Make your move</h1>
+		</header>
+
+		<article>
+			<section>
+				<div class="training">
+			
+					<div class="exercise">
+						<img src="img/nf6.jpg" alt="sicilian defense">
+					</div>
+					
+					<div id="answer">
+					
+						<div class="label">
+							<label for="box">Find the best move</label>
+						</div>
+						
+						<input type="text" id="box" >
+					
+						<div id="button">
+							<input type="submit" value="Check!" onclick="checkmate()">
+						</div>
+						
+					
+					</div>
+					
+					<div style="clear: both;"></div>
+				</div>
+			</section>
+		</article>	
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body
+{
+	background-image: url("img/stardust.png");;
+	/* Background pattern from Toptal Subtle Patterns */
+	font-family: 'Nunito', sans-serif;
+	color: #fff;
+}
+
+h1.logo
+{
+	font-size: 70px;
+	text-align: center;
+	color: #bd853a;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.training
+{
+	font-size: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	margin-top: 50px;
+}
+
+.exercise
+{
+	width: 720px;
+	float: left;
+	height: 720px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(31,31,31,1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(31,31,31,1);
+	box-shadow: 10px 10px 5px 0px rgba(31,31,31,1);
+}
+
+#answer
+{
+	width: 480px;
+	float: left;
+	margin-top: 200px;
+	font-size: 24px;
+	text-align: center;
+	
+}
+
+.label
+{
+	font-size: 36px;
+	color: #bd853a;
+
+}
+
+input[type=text]
+{
+	width: 100px;
+	background-color: #efe0cb;
+	opacity: 0.2;
+	font-size: 18px;
+	color: #bd853a;
+	padding: 15px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: auto;
+	letter-spacing: 10px;
+	outline: none;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+
+}
+
+input[type=text]:focus
+{
+	opacity: 1;
+	background-color: #666563;
+	text-transform: uppercase;
+}
+
+input[type=submit]
+{
+	cursor: pointer;
+	border: none;
+	width: 300px;
+	font-size: 40px;
+	color:  #f3f3f2;
+	border-radius: 5px;
+	background-color: #bd853a;
+	letter-spacing: 4px;
+	padding: 10px 0px;
+}
+
+input[type=submit]:hover
+{
+	font-size: 42px;
+	-webkit-box-shadow: 0px -1px 10px 8px rgba(97,97,97,1);
+	-moz-box-shadow: 0px -1px 10 8px rgba(97,97,97,1);
+	box-shadow: 0px -1px 10px 8px rgba(97,97,97,1);
+}
