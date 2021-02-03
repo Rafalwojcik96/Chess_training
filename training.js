@@ -1,13 +1,18 @@
-function checkmate()
-{
-	let correct_answer="nf6";
-	let answer = document.getElementById("box").value;
-	if (answer == correct_answer)
+const checkerboards = [
+	{image:"nf6.jpg",answer:"nf6"},
+	{image:"qa4.jpg",answer:"qa4"}
+];
+
+
+function checkmate(){
+	let correct_answer = checkerboards[0].answer;
+	let player_answer = $('#box').val();
+	if (player_answer == correct_answer)
 	{
-		document.getElementById("answer").innerHTML= "poprawna odpowiedź"
+		$('.answer').html("That's right! It's best move.")
 	}
 	else
 	{
-		document.getElementById("answer").innerHTML= "zła odpowiedź"
+		$(".answer").html ("It's not best move.")
 	}
 }

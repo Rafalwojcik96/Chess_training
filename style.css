@@ -24,7 +24,7 @@ h1.logo
 	margin-top: 50px;
 }
 
-.exercise
+#exercise
 {
 	width: 720px;
 	float: left;
@@ -34,7 +34,7 @@ h1.logo
 	box-shadow: 10px 10px 5px 0px rgba(31,31,31,1);
 }
 
-#answer
+.answer
 {
 	width: 480px;
 	float: left;
