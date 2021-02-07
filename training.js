@@ -6,6 +6,7 @@ const checkerboards = [
 ];
 
 let array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)];
+let score = 0;
 
 window.onload = draw;
 
@@ -44,6 +45,8 @@ function checkmate(){
 			</div>
 			<input type="submit" value="Try next!" onclick="next()">
 		</div>`)
+		score++;
+		counter();
 	}
 	else{	
 		$(".answer").html(`
@@ -78,4 +81,8 @@ function next(){
 	<div id="button">
 		<input type="submit" value="Check!" onclick="checkmate()">
 	</div>`)
+}
+
+function counter(){
+	$('.points_counter').html(`Your score: ${score}`)
 }

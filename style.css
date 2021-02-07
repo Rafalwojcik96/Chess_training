@@ -11,7 +11,7 @@ h1.logo
 	font-size: 70px;
 	text-align: center;
 	color: #bd853a;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 50px;
 }
 
@@ -21,7 +21,7 @@ h1.logo
 	margin-left: auto;
 	margin-right: auto;
 	width: 1200px;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 #exercise
@@ -35,10 +35,10 @@ h1.logo
 }
 
 .answer
-{
+{	
 	width: 450px;
 	float: left;
-	margin-top: 200px;
+	margin-top: 150px;
 	font-size: 24px;
 	text-align: center;
 	
@@ -48,8 +48,19 @@ h1.logo
 {
 	font-size: 36px;
 	color: #bd853a;
-
 }
+
+.points_counter
+{	
+	color:#bd853a;
+	font-weight: 1000;
+	float: left;
+	margin-top: 20px;
+	width: 390px;
+	margin-left: 60px;
+}
+
+
 
 input[type=text]
 {
