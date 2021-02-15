@@ -24,20 +24,13 @@
 		<article>
 			<section>
 				<div class="training">
-					<div class="chessboard_mark_numbers"></div>
-					<div id="exercise"></div>
-					<div class="points_counter">Your score: 0</div>
-					<div class="answer">
-						<div class="label">
-							<label for="box">Find the best move</label>
-						</div>
-						<input type="text" id="box" autocomplete="off">
-						<div id="button">
-							<input type="submit" value="Check!" onclick="checkmate()">
-						</div>	
-					</div>
-					<div style="clear: both;"></div>
-					<div class="chessboard_mark"></div>	
+
+				<div class="start"><h1>Select your training</h1></div>
+				<div id="pies">
+					<input type="submit" value="Standard training" onclick="selected_standard()">
+					<input type="submit" value="Openings training" onclick="selected_openings()">
+				</div>	
+
 				</div>
 			</section>
 		</article>	

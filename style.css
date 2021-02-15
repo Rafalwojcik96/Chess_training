@@ -15,6 +15,16 @@ h1.logo
 	margin-bottom: 50px;
 }
 
+.start
+{
+	font-size: 40px;
+	text-align: center;
+	color: #bd853a;
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+
+
 .training
 {
 	font-size: 50px;
@@ -22,7 +32,12 @@ h1.logo
 	margin-right: auto;
 	width: 1200px;
 	margin-top: 20px;
+	text-align: center;
 }
+
+/*#button{
+	
+}*/
 
 #exercise
 {
@@ -93,7 +108,7 @@ input[type=submit]
 	cursor: pointer;
 	border: none;
 	width: 300px;
-	font-size: 40px;
+	font-size: 25px;
 	color:  #f3f3f2;
 	border-radius: 5px;
 	background-color: #bd853a;
@@ -103,7 +118,8 @@ input[type=submit]
 
 input[type=submit]:hover
 {
-	font-size: 42px;
+	/*font-size: 42px;*/
+	font-size: 27px;
 	-webkit-box-shadow: 0px -1px 10px 8px rgba(97,97,97,1);
 	-moz-box-shadow: 0px -1px 10 8px rgba(97,97,97,1);
 	box-shadow: 0px -1px 10px 8px rgba(97,97,97,1);

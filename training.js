@@ -1,18 +1,58 @@
-const checkerboards = [
-	{image:"nf6.jpg",answer:"nf6", color:"black"},
-	{image:"qa4.jpg",answer:"qa4",color:"white"},
-	{image:"sicilian_defense.jpg",answer:"nc3",color:"white"},
-	{image:"nd3.jpg",answer:"nd3",color:"black"},
-];
-
-let array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)];
 let score = 0;
+let array_number;
 
-window.onload = draw;
+function selected_standard(){
+	const checkerboards = [
+		{image:"nf6.jpg",answer:"nf6", color:"black"},
+		{image:"qa4.jpg",answer:"qa4",color:"white"},
+		{image:"nd3.jpg",answer:"nd3",color:"black"}
+	];
+	$('.training').html(`<div class="chessboard_mark_numbers"></div>
+	<div id="exercise"></div>
+	<div class="points_counter">Your score: 0</div>
+	<div class="answer">
+		<div class="label">
+			<label for="box">Find the best move</label>
+		</div>
+		<input type="text" id="box" autocomplete="off">
+		<div id="button">
+			<input type="submit" value="Check!" onclick="checkmate()">
+		</div>	
+	</div>
+	<div style="clear: both;"></div>
+	<div class="chessboard_mark"></div>`)
+	array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)]
+	draw();
+	return array_number;
+}
+
+function selected_openings(){
+	const checkerboards = [
+		{image:"sicilian_defense.jpg",answer:"nc3",color:"white"}
+	];
+	$('.training').html(`<div class="chessboard_mark_numbers"></div>
+	<div id="exercise"></div>
+	<div class="points_counter">Your score: 0</div>
+	<div class="answer">
+		<div class="label">
+			<label for="box">Find the best move</label>
+		</div>
+		<input type="text" id="box" autocomplete="off">
+		<div id="button">
+			<input type="submit" value="Check!" onclick="checkmate()">
+		</div>	
+	</div>
+	<div style="clear: both;"></div>
+	<div class="chessboard_mark"></div>`)
+	array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)];
+	draw();
+	return array_number;
+}
+
 
 function draw(){
 	$("#exercise").html(`<img src="img/${array_number.image}">`);
-	change_mark()
+	change_mark();
 }
 
 function change_mark(){
@@ -56,6 +96,8 @@ function checkmate(){
 			</div>
 			<input type="submit" value="Try again!" onclick="again()">
 		</div>`);
+		score--;
+		counter();
 	}
 }
 
