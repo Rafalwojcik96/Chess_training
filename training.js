@@ -1,12 +1,16 @@
 let score = 0;
 let array_number;
 
+const checkerboards_openings = [
+	{image:"sicilian_defense.jpg",answer:"nc3",color:"white"}
+];
+const checkerboards_standard = [
+	{image:"nf6.jpg",answer:"nf6", color:"black"},
+	{image:"qa4.jpg",answer:"qa4",color:"white"},
+	{image:"nd3.jpg",answer:"nd3",color:"black"}
+];
+
 function selected_standard(){
-	const checkerboards = [
-		{image:"nf6.jpg",answer:"nf6", color:"black"},
-		{image:"qa4.jpg",answer:"qa4",color:"white"},
-		{image:"nd3.jpg",answer:"nd3",color:"black"}
-	];
 	$('.training').html(`<div class="chessboard_mark_numbers"></div>
 	<div id="exercise"></div>
 	<div class="points_counter">Your score: 0</div>
@@ -16,20 +20,17 @@ function selected_standard(){
 		</div>
 		<input type="text" id="box" autocomplete="off">
 		<div id="button">
-			<input type="submit" value="Check!" onclick="checkmate()">
+			<input type="submit" value="Check!" onclick="checkmate_standard()">
 		</div>	
 	</div>
 	<div style="clear: both;"></div>
 	<div class="chessboard_mark"></div>`)
-	array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)]
+	array_number = checkerboards_standard[Math.floor(Math.random()*checkerboards_standard.length)]
 	draw();
 	return array_number;
 }
 
 function selected_openings(){
-	const checkerboards = [
-		{image:"sicilian_defense.jpg",answer:"nc3",color:"white"}
-	];
 	$('.training').html(`<div class="chessboard_mark_numbers"></div>
 	<div id="exercise"></div>
 	<div class="points_counter">Your score: 0</div>
@@ -39,12 +40,12 @@ function selected_openings(){
 		</div>
 		<input type="text" id="box" autocomplete="off">
 		<div id="button">
-			<input type="submit" value="Check!" onclick="checkmate()">
+			<input type="submit" value="Check!" onclick="checkmate_openings()">
 		</div>	
 	</div>
 	<div style="clear: both;"></div>
 	<div class="chessboard_mark"></div>`)
-	array_number = checkerboards[Math.floor(Math.random()*checkerboards.length)];
+	array_number = checkerboards_openings[Math.floor(Math.random()*checkerboards_openings.length)];
 	draw();
 	return array_number;
 }
@@ -74,7 +75,7 @@ function change_mark(){
 	}
 }
 
-function checkmate(){
+function checkmate_standard(){
 	const correct_answer = array_number.answer;
 	const player_answer = $('#box').val();
 	if (player_answer == correct_answer){	
@@ -83,7 +84,7 @@ function checkmate(){
 			<div class="label">
 				<label for="box">Correct!</label>
 			</div>
-			<input type="submit" value="Try next!" onclick="next()">
+			<input type="submit" value="Try next!" onclick="next_standard()">
 		</div>`)
 		score++;
 		counter();
@@ -94,26 +95,64 @@ function checkmate(){
 			<div class="label">
 				<label for="box">It's not the best move.</label>
 			</div>
-			<input type="submit" value="Try again!" onclick="again()">
+			<input type="submit" value="Try again!" onclick="again_standard()">
 		</div>`);
 		score--;
 		counter();
 	}
 }
 
-function again(){
+function checkmate_openings(){
+	const correct_answer = array_number.answer;
+	const player_answer = $('#box').val();
+	if (player_answer == correct_answer){	
+		$('.answer').html(`
+		<div class="correct_answer">
+			<div class="label">
+				<label for="box">Correct!</label>
+			</div>
+			<input type="submit" value="Try next!" onclick="next_openings()">
+		</div>`)
+		score++;
+		counter();
+	}
+	else{	
+		$(".answer").html(`
+		<div class="correct_answer">
+			<div class="label">
+				<label for="box">It's not the best move.</label>
+			</div>
+			<input type="submit" value="Try again!" onclick="again_openings()">
+		</div>`);
+		score--;
+		counter();
+	}
+}
+
+function again_standard(){
 	$('.answer').html(`
 	<div class="label">
 		<label for="box">Find the best move</label>
 	</div>
 	<input type="text" id="box" autocomplete="off">
 	<div id="button">
-		<input type="submit" value="Check!" onclick="checkmate()">
+		<input type="submit" value="Check!" onclick="checkmate_standard()">
 	</div>`)
 }
 
-function next(){
-	array_number=checkerboards[Math.floor(Math.random()*checkerboards.length)];
+function again_openings(){
+	$('.answer').html(`
+	<div class="label">
+		<label for="box">Find the best move</label>
+	</div>
+	<input type="text" id="box" autocomplete="off">
+	<div id="button">
+		<input type="submit" value="Check!" onclick="checkmate_openings()">
+	</div>`)
+}
+
+function next_standard(){
+	array_number=checkerboards_standard[Math.floor(Math.random()*checkerboards_standard.length)];
 	draw();
 	$(".answer").html(`
 	<div class="label">
@@ -121,7 +160,22 @@ function next(){
 	</div>
 	<input type="text" id="box" autocomplete="off">
 	<div id="button">
-		<input type="submit" value="Check!" onclick="checkmate()">
+		<input type="submit" value="Check!" onclick="checkmate_standard()">
+	</div>`)
+}
+
+
+
+function next_openings(){
+	array_number=checkerboards_openings[Math.floor(Math.random()*checkerboards_openings.length)];
+	draw();
+	$(".answer").html(`
+	<div class="label">
+		<label for="box">Find the best move</label>
+	</div>
+	<input type="text" id="box" autocomplete="off">
+	<div id="button">
+		<input type="submit" value="Check!" onclick="checkmate_openings()">
 	</div>`)
 }
 

@@ -8,11 +8,18 @@ body
 
 h1.logo
 {
-	font-size: 70px;
-	text-align: center;
-	color: #bd853a;
 	margin-top: 0px;
 	margin-bottom: 50px;
+	color: #fff6a9;
+	font-family: 'Sacramento', cursive;
+	font-size: 70px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: capitalize;
+	margin: 20px auto 0;
+	text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+	position: relative;
+	margin-top: 0px;
 }
 
 .start
@@ -24,6 +31,16 @@ h1.logo
 	margin-bottom: 10px;
 }
 
+.type_of_training
+{
+	text-align: center;
+}
+
+.type_of_training>input[type=submit]
+{
+	margin:50px;
+	font-size: 30px;
+}
 
 .training
 {
@@ -32,12 +49,7 @@ h1.logo
 	margin-right: auto;
 	width: 1200px;
 	margin-top: 20px;
-	text-align: center;
 }
-
-/*#button{
-	
-}*/
 
 #exercise
 {
@@ -74,8 +86,6 @@ h1.logo
 	width: 390px;
 	margin-left: 60px;
 }
-
-
 
 input[type=text]
 {
