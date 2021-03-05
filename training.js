@@ -2,12 +2,19 @@ let score = 0;
 let array_number;
 
 const checkerboards_openings = [
-	{image:"sicilian_defense.jpg",answer:"nc3",color:"white"}
+	{image:"o1.jpg",answer:"nc3",color:"white"},
+	{image:"o2.jpg",answer:"ng6",color:"black"},
+	{image:"o3.jpg",answer:"nc6",color:"black"},
+	{image:"o4.jpg",answer:"nc6",color:"white"}
 ];
 const checkerboards_standard = [
-	{image:"nf6.jpg",answer:"nf6", color:"black"},
-	{image:"qa4.jpg",answer:"qa4",color:"white"},
-	{image:"nd3.jpg",answer:"nd3",color:"black"}
+	{image:"s1.jpg",answer:"nf6", color:"black"},
+	{image:"s2.jpg",answer:"qa4",color:"white"},
+	{image:"s3.jpg",answer:"nd3",color:"black"},
+	{image:"s4.jpg",answer:"bc5",color:"white"},
+	{image:"s5.jpg",answer:"qg5",color:"white"},
+	{image:"s6.jpg",answer:"e5",color:"white"},
+	{image:"s7.jpg",answer:"ne4", color:"black"}
 ];
 
 function selected_standard(){
